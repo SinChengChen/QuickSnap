@@ -46,6 +46,8 @@ namespace CardGames
 		{
 			//SwinGame.ClearScreen(Color.White);
 			SwinGame.DrawBitmap ("cardsBoard.png", 0, 0);
+			SwinGame.LoadSoundEffectNamed("Slap", "slap.wav");
+			SwinGame.PlaySoundEffect ("Slap");
 			SwinGame.LoadFontNamed ("GameFont", "Chunkfine.otf", 24);
 			SwinGame.DrawText (""+myGame.Score(0), Color.White, "GameFont", 0, 30);
 
