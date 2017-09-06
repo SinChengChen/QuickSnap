@@ -9,7 +9,7 @@ namespace CardGames
         public static void LoadResources()
         {
             Bitmap cards;
-            cards = SwinGame.LoadBitmapNamed ("Cards", "Cards.png");
+			cards = SwinGame.LoadBitmapNamed ("Cards", "Cards.png");
             SwinGame.BitmapSetCellDetails (cards, 82, 110, 13, 5, 53);      // set the cells in the bitmap to match the cards
         }
 
@@ -48,8 +48,8 @@ namespace CardGames
 			SwinGame.DrawBitmap ("cardsBoard.png", 0, 0);
 			SwinGame.LoadSoundEffectNamed("Slap", "slap.wav");
 			SwinGame.PlaySoundEffect ("Slap");
-			SwinGame.LoadFontNamed ("GameFont", "Chunkfine.otf", 24);
-			SwinGame.DrawText (""+myGame.Score(0), Color.White, "GameFont", 0, 30);
+			SwinGame.LoadFontNamed ("GameFont", "Chunkfive.otf", 24);
+
 
 			// Draw the top card
 			Card top = myGame.TopCard;
@@ -59,6 +59,7 @@ namespace CardGames
 				SwinGame.DrawText ("Player 1 score: " + myGame.Score(0), Color.RoyalBlue, 0, 30);
 				SwinGame.DrawText ("Player 2 score: " + myGame.Score(1), Color.RoyalBlue, 0, 40);
 				SwinGame.DrawCell (SwinGame.BitmapNamed ("Cards"), top.CardIndex, 350, 50);
+				SwinGame.DrawText ("" + myGame.Score (0), Color.White, "GameFont", 0, 30);
 			}
 			else
 			{
